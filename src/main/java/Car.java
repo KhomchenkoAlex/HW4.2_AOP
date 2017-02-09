@@ -17,9 +17,17 @@ public class Car {
         this.wheel = wheel;
     }
 
+    public void startCar (){
+        System.out.println("The car moves...");
+    }
+
+    public void stopCar(){
+        System.out.println("The car stops...");
+    }
+
     public String carToString() {
         String res = "This car has ";
-        res = res + engine.getEngineCapacity() + "cc engine capacity and wheel with " + wheel.getTyres() + " tyres.";
+        res = res + engine.getEngineCapacity() + "cc engine capacity and wheels with " + wheel.getTyres() + " tyres.";
         return res;
     }
 }

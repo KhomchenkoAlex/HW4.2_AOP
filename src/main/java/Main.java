@@ -1,8 +1,10 @@
+import org.springframework.context.annotation.ImportResource;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
  * Created by alex on 01.02.17.
  */
+
 public class Main {
     public static void main(String[] args) {
         ClassPathXmlApplicationContext applicationContext =

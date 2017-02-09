@@ -1,6 +1,7 @@
 package autoparts;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 /**
@@ -8,15 +9,21 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class Wheel {
+
     private Tyres tyres;
 
     @Autowired
-    public void setTyres(Tyres tyres) {
+    @Qualifier("SummerTyres")
+    public void setTyres( Tyres tyres) {
         this.tyres = tyres;
     }
 
     public String getTyres() {
-        String res = tyres.getName() + " " + tyres.getSize() + "''";
+        String res = tyres.getName() + " " + tyres.getSize() + "''" + tyres.getType();
         return res;
+    }
+
+    public void revolveWheels(){
+        System.out.println("Revolve the wheels");
     }
 }
